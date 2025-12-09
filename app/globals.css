@@ -7,6 +7,7 @@
   --foreground: rgb(44, 44, 44);
   --nav-color: white;
   --card-bg: rgb(160, 160, 160);
+  --card-hover: rgb(105, 105, 105);
   --brand: #ff00d0;
   --brand2: #ff00d0;
   --pg-color:rgb(87, 87, 87);
@@ -28,24 +29,11 @@ html.dark {
   --background: ;
   --foreground: white;
   --card-bg: rgb(75, 75, 75);
+  --card-hover: rgb(102, 102, 102);
   --nav-color: rgb(46, 45, 45);
   --brand2: white;
   --pg-color:rgb(218, 218, 218);
 }
-
-img, svg {
-  transition: filter 0.35s ease, opacity 0.35s ease;
-}
-
-* {
-  transition:
-    background-color 0.35s ease,
-    color 0.35s ease,
-    border-color 0.35s ease,
-    fill 0.35s ease,
-    stroke 0.35s ease;
-}
-
 
 body {
   background: var(--background);
@@ -57,13 +45,8 @@ body {
 
 .icon-filter {
   filter: brightness(0) invert(0);
-  transition: filter 0.5s ease;
 }
 
 .dark .icon-filter {
   filter: brightness(0) invert(1);
-}
-
-.icon-filter:hover {
-  filter: brightness(1) invert(0);
 }

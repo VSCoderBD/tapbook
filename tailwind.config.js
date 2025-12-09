@@ -13,6 +13,7 @@ module.exports = {
         brand: "var(--brand)",
         brand2: "var(--brand2)",
         card: "var(--card-bg)",
+        cardHover: "var(--card-hover)",
         nav: "var(--nav-color)",
         pg: "var(--pg-color)",
         background: "var(--background)",

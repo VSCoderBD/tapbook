@@ -26,17 +26,17 @@ export default function Navbar() {
               </button>
           </div>
 
-<ul className="hidden sm:flex justify-between items-center gap-2 mx-2">
+<ul className="hidden sm:flex justify-between items-center mx-2">
   {navLinks.map((link, idx) => (
-    <li key={idx} className="group">
+    <li key={idx} className="flex justify-center group hover:bg-card w-full p-2 rounded-lg">
       <Link href={link.href}>
         {link.image && (
           <Image
             src={link.image}
             alt={link.title}
-            width={32}
-            height={32}
-            className="border-b-[3px] items-center border-transparent group-hover:border-brand"
+            width={30}
+            height={30}
+            className="icon-filter items-center"
           />
         )}
       </Link>
@@ -45,7 +45,7 @@ export default function Navbar() {
 </ul>
  
         <ul className="flex py-2 justify-end items-center gap-2">
-                <button className="bg-card p-[6px] rounded-full">
+                <button className="bg-card hover:bg-cardHover p-[6px] rounded-full">
                   <img src="/images/nav/menu.svg" className="w-7 icon-filter" />
                 </button>
           {mainLinks.map((link, idx) => (
@@ -55,7 +55,7 @@ export default function Navbar() {
                 className="flex hover:text-primary transition"
               >
                 {link.image && (
-<div className="bg-card p-2 rounded-full">
+<div className="bg-card p-2 rounded-full hover:bg-cardHover">
   <Image 
     src={link.image} 
     alt={link.title} 
