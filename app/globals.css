@@ -6,12 +6,13 @@
   --background: rgb(194, 194, 194);
   --foreground: rgb(44, 44, 44);
   --nav-color: white;
-  --card-bg: rgb(160, 160, 160);
-  --card-hover: rgb(105, 105, 105);
+  --card-bg: rgb(201, 201, 201);
+  --card-hover: rgb(190, 190, 190);
   --brand: #ff00d0;
   --brand2: #ff00d0;
   --pg-color:rgb(87, 87, 87);
   --bd-color:rgb(212, 212, 212);
+  --border: rgb(182, 178, 178);
 }
 
 @theme inline {
@@ -44,7 +45,11 @@ body {
 }
 
 .icon-filter {
-  filter: brightness(0) invert(0);
+ filter: brightness(0) invert(0);
+}
+
+  .icon-filter-light {
+  filter: sepia(0.7) saturate(0) brightness(0.9);
 }
 
 .dark .icon-filter {

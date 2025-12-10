@@ -19,6 +19,7 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         bd: "var(--bd-color)",
+        border: "var(--border)",
       },
     },
   },
