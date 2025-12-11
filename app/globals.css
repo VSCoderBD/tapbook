@@ -34,9 +34,12 @@ html.dark {
   --nav-color: rgb(46, 45, 45);
   --brand2: white;
   --pg-color:rgb(218, 218, 218);
+  --border: rgb(83, 83, 83);
 }
 
 body {
+  @apply bg-white text-black dark:bg-[#0f0f0f] dark:text-gray-100;
+  
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
