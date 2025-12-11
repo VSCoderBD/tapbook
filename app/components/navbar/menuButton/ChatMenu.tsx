@@ -2,15 +2,15 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function ChatButton() {
+export default function ChatMenu() {
 return (
-<Link href={"/chat"} className="icon-filter">
+<button className="icon-filter">
 <Image 
 src="/images/nav/chat.svg"
 alt="Chat"
 width={28}
 height={28}
 />
-</Link>
+</button>
 );
 }
