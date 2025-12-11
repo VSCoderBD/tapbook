@@ -48,13 +48,22 @@ export default function Navbar() {
             <button onClick={() => setProfileOpen(!profileOpen)}
             className="reletade flex justify-center my-1.5"><ProfileMenu />
             </button>
-            {profileOpen && (
-            <div className="absolute left-1/2 -translate-x-1/2
- flex flex-col items-start  top-14 w-[95%] h-[90%] bg-nav rounded shadow-lg shadow-slate-500 p-4 gap-4 z-50">
-<Mode />
-<LogOut />
-            </div>
-            )}
+{profileOpen && (
+  <div
+    className="
+      absolute top-14 z-50
+      left-1/2 -translate-x-1/2
+      flex flex-col gap-4
+      bg-nav rounded-xl shadow-lg shadow-slate-600
+      w-[95%] p-4
+      sm:w-[350px] sm:left-auto sm:right-2 sm:translate-x-0
+    "
+  >
+    <Mode />
+    <LogOut />
+  </div>
+)}
+
           </div>
           </div>
 
