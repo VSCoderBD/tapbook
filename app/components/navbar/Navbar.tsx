@@ -1,6 +1,8 @@
 "use client"
 import React from "react";
+import Image from "next/image";
 import {useDarkMode} from "../hooks/UseDarkMode";
+import { useState, useEffect } from "react";
 import BrandLogo from "./navButtons/BrandLogo";
 import BrandName from "./navButtons/BrandName";
 import HomeButton from "./navButtons/HomeButton";
@@ -12,8 +14,14 @@ import SearchButtons from "./menuButton/SearchButton";
 import ChatMenu from "./menuButton/ChatMenu";
 import GroupButton from "./navButtons/GroupButton";
 import MenuMenu from "./menuButton/MenuMenu";
+import LogOut from "../profileMenu/LogOut";
+import Mode from "../profileMenu/Mode";
 
 export default function Navbar() {
+
+  const { isDark, toggleDarkMode } = useDarkMode();
+  const [mounted, setMounted] = useState(false);
+  const [profileOpen, setProfileOpen] = useState(false);
 
     return (
         <nav className="flex flex-col justify-center items-center border-b border-border bg-nav text-pg">
@@ -36,7 +44,17 @@ export default function Navbar() {
             <div className="hidden sm:flex justify-center my-1.5 w-10 bg-card hover:bg-cardHover p-1 rounded-full"><MenuMenu /></div>
             <div className="hidden sm:flex justify-center my-1.5 w-10 bg-card hover:bg-cardHover p-1 rounded-full"><NotificationButton /></div>
             <div className="hidden sm:flex justify-center my-1.5 w-10 bg-card hover:bg-cardHover p-1 rounded-full"><ChatMenu /></div>
-            <div className="flex justify-center my-1.5"><ProfileMenu /></div>
+
+            <button onClick={() => setProfileOpen(!profileOpen)}
+            className="reletade flex justify-center my-1.5"><ProfileMenu />
+            </button>
+            {profileOpen && (
+            <div className="absolute left-1/2 -translate-x-1/2
+ flex flex-col items-start  top-14 w-[95%] h-[90%] bg-nav rounded shadow-lg shadow-slate-500 p-4 gap-4 z-50">
+<Mode />
+<LogOut />
+            </div>
+            )}
           </div>
           </div>
 

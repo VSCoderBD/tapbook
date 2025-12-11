@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 export default function FriendButton() {
   const pathname = usePathname();
-  const active = pathname === "/friend";
+  const active = pathname === "/friends";
 
   return (
     <Link
