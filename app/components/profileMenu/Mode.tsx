@@ -1,19 +1,17 @@
 "use client";
+
 import Image from "next/image";
 import { useState } from "react";
 import { useDarkMode } from "../hooks/UseDarkMode";
 
+type ThemeType = "system" | "light" | "dark";
+
 export default function DisplayMenu() {
   const [open, setOpen] = useState(false);
 
-  const {
-    theme,
-    setLightMode,
-    setDarkMode,
-    setSystemMode,
-  } = useDarkMode();
+  const { theme, setLightMode, setDarkMode, setSystemMode } = useDarkMode();
 
-  const themeText = {
+  const themeText: Record<ThemeType, string> = {
     system: "Auto",
     light: "Light Mode",
     dark: "Dark Mode",
@@ -40,20 +38,21 @@ export default function DisplayMenu() {
         </div>
 
         <div className="flex items-center gap-2">
-        <p className="text-xs opacity-70">{themeText[theme]}</p>
-        <Image
-          src="/images/profilemenu/forward.svg"
-          alt="Arrow"
-          width={20}
-          height={20}
-          className={`icon-filter transition-transform duration-200 ${
-            open ? "rotate-90" : "rotate-0"
-          }`}
-        />
+          <p className="text-xs opacity-70">{themeText[theme as ThemeType]}</p>
+          <Image
+            src="/images/profilemenu/forward.svg"
+            alt="Arrow"
+            width={20}
+            height={20}
+            className={`icon-filter transition-transform duration-200 ${
+              open ? "rotate-90" : "rotate-0"
+            }`}
+          />
         </div>
       </button>
 
- <div
+      {/* Dropdown */}
+      <div
         className={`
           left-0 w-full bg-card rounded-xl shadow-lg overflow-hidden
           transition-all duration-300 ease-in-out
@@ -61,35 +60,49 @@ export default function DisplayMenu() {
         `}
       >
         <div className="flex flex-col p-2 bg-card rounded-lg">
+
+          {/* SYSTEM */}
           <button
             onClick={() => {
               setSystemMode();
               setOpen(false);
             }}
-            className="p-2 hover:bg-cardHover rounded text-left"
+            className="p-2 hover:bg-cardHover rounded flex justify-between items-center"
           >
-            System Default
+            <span>System Default</span>
+            {theme === "system" && (
+              <span className="w-3 h-3 bg-brand rounded-full"></span>
+            )}
           </button>
 
+          {/* LIGHT */}
           <button
             onClick={() => {
               setLightMode();
               setOpen(false);
             }}
-            className="p-2 hover:bg-cardHover rounded text-left"
+            className="p-2 hover:bg-cardHover rounded flex justify-between items-center"
           >
-            Light Mode
+            <span>Light Mode</span>
+            {theme === "light" && (
+              <span className="w-3 h-3 bg-brand rounded-full"></span>
+            )}
           </button>
 
+          {/* DARK */}
           <button
             onClick={() => {
               setDarkMode();
               setOpen(false);
             }}
-            className="p-2 hover:bg-cardHover rounded text-left"
+            className="p-2 hover:bg-cardHover rounded flex justify-between items-center"
           >
-            Dark Mode
+            <span>Dark Mode</span>
+            {theme === "dark" && (
+              <span className="w-3 h-3 bg-brand rounded-full"></span>
+            )}
           </button>
+
         </div>
       </div>
     </div>

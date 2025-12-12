@@ -13,6 +13,7 @@ import GroupButton from "./navButtons/GroupButton";
 import MenuMenu from "./menuButton/MenuMenu";
 import LogOut from "../profileMenu/LogOut";
 import Mode from "../profileMenu/Mode";
+import SettingsMenu from "../profileMenu/Settings";
 
 export default function Navbar() {
 
@@ -50,11 +51,12 @@ export default function Navbar() {
       absolute top-14 z-50
       left-1/2 -translate-x-1/2
       flex flex-col gap-4
-      bg-nav rounded-xl shadow-lg shadow-slate-600
+      bg-nav rounded-xl shadow-lg shadow-pink-600
       w-[95%] p-4
       sm:w-[350px] sm:left-auto sm:right-2 sm:translate-x-0
     "
   >
+    <SettingsMenu />
     <Mode />
     <LogOut />
   </div>

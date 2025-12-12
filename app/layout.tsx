@@ -1,8 +1,11 @@
 "use client";
+
 import "./globals.css";
 import Navbar from "./components/navbar/Navbar";
 import { useDarkMode } from "./components/hooks/UseDarkMode";
 import LoadingWrapper from "./components/hooks/LoadingWrapper";
+import LoginPage from "./userpage/login";
+import { isLoggedIn } from "./components/hooks/useAuth";
 
 async function getData() {
   return new Promise((resolve) => {
@@ -13,12 +16,20 @@ async function getData() {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   useDarkMode();
 
+  const logged = isLoggedIn(); // <-- check login here
+
   return (
     <html lang="en">
       <body>
         <LoadingWrapper loadPromise={getData()}>
-        <Navbar />
-          {children}
+           {!logged ? (
+          <LoginPage />
+        ) : (
+          <>
+            <Navbar />
+            {children}
+          </>
+        )}
         </LoadingWrapper>
       </body>
     </html>

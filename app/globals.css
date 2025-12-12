@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: rgb(194, 194, 194);
+  --background: rgb(226, 226, 226);
   --foreground: rgb(44, 44, 44);
   --nav-color: white;
   --card-bg: rgb(201, 201, 201);
@@ -12,7 +12,7 @@
   --brand2: #ff00d0;
   --pg-color:rgb(87, 87, 87);
   --bd-color:rgb(212, 212, 212);
-  --border: rgb(182, 178, 178);
+  --border: rgb(209, 209, 209);
 }
 
 @theme inline {
@@ -30,11 +30,11 @@ html.dark {
   --background: #0f0f0f;
   --foreground: white;
   --card-bg: rgb(75, 75, 75);
-  --card-hover: rgb(102, 102, 102);
-  --nav-color: rgb(46, 45, 45);
+  --card-hover: rgb(37, 37, 37);
+  --nav-color: rgb(29, 29, 32);
   --brand2: white;
   --pg-color:rgb(218, 218, 218);
-  --border: rgb(83, 83, 83);
+  --border: rgb(56, 56, 56);
 }
 
 body {

@@ -1,9 +1,23 @@
 "use client";
 
-export default function Home() {
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { isLoggedIn } from "./components/hooks/useAuth";
+
+export default function RootRedirect() {
+  const router = useRouter();
+
+  useEffect(() => {
+    if (isLoggedIn()) {
+      router.replace("/");
+    } else {
+      router.replace("/login");
+    }
+  }, [router]);
+
   return (
-    <main>
-      <h1>Welcome to the Home Page</h1>
-    </main>
+    <div className="min-h-screen flex items-center justify-center">
+      <p className="opacity-60">Redirecting...</p>
+    </div>
   );
 }
