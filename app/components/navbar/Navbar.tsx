@@ -1,7 +1,4 @@
 "use client"
-import React from "react";
-import Image from "next/image";
-import {useDarkMode} from "../hooks/UseDarkMode";
 import { useState, useEffect } from "react";
 import BrandLogo from "./navButtons/BrandLogo";
 import BrandName from "./navButtons/BrandName";
@@ -19,7 +16,6 @@ import Mode from "../profileMenu/Mode";
 
 export default function Navbar() {
 
-  const { isDark, toggleDarkMode } = useDarkMode();
   const [mounted, setMounted] = useState(false);
   const [profileOpen, setProfileOpen] = useState(false);
 
