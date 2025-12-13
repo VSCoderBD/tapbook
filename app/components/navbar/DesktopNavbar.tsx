@@ -1,15 +1,15 @@
 "use client";
 
 import BrandLogo from "./navButtons/BrandLogo";
-import SearchButtons from "./menuButton/SearchButton";
+import SearchButtons from "./navButtons/SearchButton";
 import HomeButton from "./navButtons/HomeButton";
 import FriendButton from "./navButtons/FriendButton";
 import VideoButton from "./navButtons/VideoButton";
 import GroupButton from "./navButtons/GroupButton";
-import MenuMenu from "./menuButton/MenuMenu";
-import NotificationButton from "./menuButton/NotificationButton";
-import ChatMenu from "./menuButton/ChatMenu";
-import ProfileMenu from "./menuButton/ProfileMenu";
+import MenuMenu from "./navButtons/MenuMenu";
+import NotificationButton from "./navButtons/NotificationButton";
+import ChatMenu from "./navButtons/ChatMenu";
+import ProfileMenu from "./navButtons/ProfileMenu";
 import SettingsMenu from "../profileMenu/Settings";
 import Display from "../profileMenu/Display";
 import LogOut from "../profileMenu/LogOut";
