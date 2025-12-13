@@ -14,7 +14,7 @@ export default function NotificationButton() {
     <div className="flex items-center text-sm gap-2">
     <button
       
-      className="relative bg-card group-hover:bg-cardHover p-1 rounded-full sm:w-full sm:h-full flex sm:flex-col sm:items-center sm:justify-center"
+      className="relative bg-card sm:group-hover:bg-cardHover p-1 rounded-full sm:w-full sm:h-full flex sm:flex-col sm:items-center sm:justify-center"
     >
       <Image
         src="/images/nav/menu.svg"
@@ -33,7 +33,7 @@ export default function NotificationButton() {
               alt="Arrow"
               width={20}
               height={20}
-              className={`icon-filter transition-transform duration-200 ${
+              className={`icon-filter sm:transition-transform sm:duration-200 ${
                 open ? "rotate-90" : "rotate-0"
               }`}
             />

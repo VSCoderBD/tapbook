@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function SearchButton() {
 return (
-<button className="flex justify-center bg-card p-2 rounded-full gap-2 items-center hover:bg-cardHover">
+<button className="flex justify-center bg-card p-2 rounded-full gap-2 items-center sm:hover:bg-cardHover">
 
 <Image 
 src="/images/nav/search.svg"

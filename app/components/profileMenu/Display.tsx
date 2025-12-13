@@ -25,7 +25,7 @@ export default function Display() {
         className="flex cursor-pointer justify-between w-full items-center"
       >
         <div className="flex items-center gap-2">
-          <div className="bg-card group-hover:bg-cardHover p-1.5 rounded-full">
+          <div className="bg-card sm:group-hover:bg-cardHover p-1.5 rounded-full">
             <Image
               src="/images/profilemenu/mode.svg"
               alt="Display Mode"
@@ -44,7 +44,7 @@ export default function Display() {
             alt="Arrow"
             width={20}
             height={20}
-            className={`icon-filter transition-transform duration-200 ${
+            className={`icon-filter sm:transition-transform sm:duration-200 ${
               open ? "rotate-90" : "rotate-0"
             }`}
           />
@@ -55,8 +55,8 @@ export default function Display() {
       <div
         className={`
           left-0 w-full bg-card rounded-xl shadow-lg overflow-hidden
-          transition-all duration-300 ease-in-out
-          ${open ? "max-h-48 opacity-100 mt-2" : "max-h-0 opacity-0 mt-0"}
+          sm:transition-all sm:duration-300 ease-in-out
+          ${open ? "sm:max-h-48 sm:opacity-100 mt-2" : "max-h-0 opacity-0 mt-0"}
         `}
       >
         <div className="flex flex-col p-2 bg-card rounded-lg">
