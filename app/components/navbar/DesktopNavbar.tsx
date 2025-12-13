@@ -18,8 +18,8 @@ export default function DesktopNavbar({ profile }: any) {
   const { open, setOpen, menuRef, buttonRef } = profile;
 
   return (
-    <nav className="relative flex flex-col justify-center items-center border-b border-border bg-nav text-pg">
-      <div className="grid grid-cols-2 sm:grid-cols-[30%_40%_30%] px-2 justify-center w-full">
+    <nav className="relative flex flex-col px-4 py-[3px] justify-center items-center border-b border-border bg-nav text-pg">
+      <div className="grid grid-cols-2 sm:grid-cols-[30%_40%_30%] justify-center w-full">
         {/* LEFT */}
         <div className="flex items-center gap-2">
           <div className="flex">
@@ -32,16 +32,16 @@ export default function DesktopNavbar({ profile }: any) {
 
         {/* CENTER */}
         <div className="hidden sm:flex justify-between mx-2 w-full items-center">
-          <div className="flex justify-center items-center hover:bg-card w-full h-[92%] rounded">
+          <div className="flex justify-center items-center hover:bg-card w-full h-[105%] rounded">
             <HomeButton />
           </div>
-          <div className="flex justify-center items-center hover:bg-card w-full h-[92%] rounded">
+          <div className="flex justify-center items-center hover:bg-card w-full h-[105%] rounded">
             <FriendButton />
           </div>
-          <div className="flex justify-center items-center hover:bg-card w-full h-[92%] rounded">
+          <div className="flex justify-center items-center hover:bg-card w-full h-[105%] rounded">
             <VideoButton />
           </div>
-          <div className="flex justify-center items-center hover:bg-card w-full h-[92%] rounded">
+          <div className="flex justify-center items-center hover:bg-card w-full h-[105%] rounded">
             <GroupButton />
           </div>
         </div>
