@@ -7,16 +7,16 @@ export default function SettingsMenu() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="w-full">
+    <div className="w-full group">
       {/* Main button */}
       <button
         onClick={() => setOpen(!open)}
         className="flex cursor-pointer justify-between w-full items-center"
       >
-        <div className="flex group items-center gap-2">
-          <div className="bg-card p-1.5 rounded-full">
+        <div className="flex items-center gap-2">
+          <div className="bg-card group-hover:bg-cardHover p-1.5 rounded-full">
             <Image
-              src="/images/profilemenu/mode.svg"
+              src="/images/profilemenu/setting.svg"
               alt="Display Mode"
               width={20}
               height={20}

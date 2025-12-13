@@ -1,9 +1,10 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useAuthHelpers, isLoggedIn } from "../components/hooks/useAuth";
+import { useAuthHelpers, isLoggedIn } from "../hooks/useAuth";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import GoogleLoginButton from "../hooks/GoogleLoginButton";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -47,7 +48,7 @@ export default function LoginPage() {
 
       {/* Login Box */}
       <div className="flex justify-center self-center w-full max-w-md">
-        <div className="bg-white w-full p-6 shadow-lg shadow-pink-600 rounded-lg">
+        <div className="bg-white w-full p-6 shadow-lg shadow-brand rounded-lg">
 
           <form onSubmit={onSubmit} className="space-y-4 w-full">
 
@@ -57,7 +58,7 @@ export default function LoginPage() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="w-full bg-transparent border border-gray-300 px-3 py-2 rounded text-black
+              className="w-full bg-transparent border border-gray-300 px-3 py-2 rounded-lg text-black
                          focus:border-brand focus:ring-0 outline-none"
               placeholder="Email address"
             />
@@ -68,7 +69,7 @@ export default function LoginPage() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              className="w-full bg-transparent border border-gray-300 px-3 py-2 rounded text-black
+              className="w-full bg-transparent border border-gray-300 px-3 py-2 rounded-lg text-black
                          focus:border-brand focus:ring-0 outline-none"
               placeholder="Password"
             />
@@ -80,24 +81,28 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={busy}
-              className="w-full bg-brand text-white py-2 rounded text-lg font-semibold disabled:opacity-60"
+              className="w-full bg-brand hover:bg-pink-500 text-white py-2 rounded-lg text-lg font-semibold disabled:opacity-60"
             >
               {busy ? "Signing in…" : "Log in"}
             </button>
 
             <Link href="/">
-              <p className="w-fit hover:border-b text-brand border-brand">Forgotten password?</p>
+              <p className="relative group w-fit">
+  <span className="relative text-brand ">Forgotten password?</span>
+  <span className="absolute left-0 bottom-0.5 w-full h-[1px] group-hover:bg-brand"></span>
+</p>
             </Link>
+              </form>
 
-            <div className="flex justify-center">
+              <GoogleLoginButton />
+
+            <div className="flex justify-center mt-4">
               <Link href="/">
-                <p className="w-fit bg-orange-600 text-white py-2 px-4 rounded text-lg font-semibold">
+                <p className="w-fit bg-orange-600 hover:bg-orange-500 text-white py-2 px-4 rounded-lg text-lg font-semibold">
                   Create new account
                 </p>
               </Link>
             </div>
-
-          </form>
 
         </div>
       </div>

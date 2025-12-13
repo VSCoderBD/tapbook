@@ -29,8 +29,8 @@ html {
 html.dark {
   --background: #0f0f0f;
   --foreground: white;
-  --card-bg: rgb(75, 75, 75);
-  --card-hover: rgb(37, 37, 37);
+  --card-bg: rgb(53, 53, 53);
+  --card-hover: rgb(68, 68, 68);
   --nav-color: rgb(29, 29, 32);
   --brand2: white;
   --pg-color:rgb(218, 218, 218);

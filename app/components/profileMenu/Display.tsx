@@ -2,11 +2,11 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { useDarkMode } from "../hooks/UseDarkMode";
+import { useDarkMode } from "../../hooks/UseDarkMode";
 
 type ThemeType = "system" | "light" | "dark";
 
-export default function DisplayMenu() {
+export default function Display() {
   const [open, setOpen] = useState(false);
 
   const { theme, setLightMode, setDarkMode, setSystemMode } = useDarkMode();
@@ -18,14 +18,14 @@ export default function DisplayMenu() {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full group">
       {/* Main button */}
       <button
         onClick={() => setOpen(!open)}
         className="flex cursor-pointer justify-between w-full items-center"
       >
-        <div className="flex group items-center gap-2">
-          <div className="bg-card p-1.5 rounded-full">
+        <div className="flex items-center gap-2">
+          <div className="bg-card group-hover:bg-cardHover p-1.5 rounded-full">
             <Image
               src="/images/profilemenu/mode.svg"
               alt="Display Mode"

@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { isLoggedIn } from "./components/hooks/useAuth";
+import { isLoggedIn } from "./hooks/useAuth";
 
 export default function RootRedirect() {
   const router = useRouter();
@@ -17,7 +17,7 @@ export default function RootRedirect() {
 
   return (
     <div className="min-h-screen flex items-center justify-center">
-      <p className="opacity-60">Redirecting...</p>
+      <p className="opacity-60">HomePage</p>
     </div>
   );
 }

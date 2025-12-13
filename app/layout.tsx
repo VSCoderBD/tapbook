@@ -2,10 +2,10 @@
 
 import "./globals.css";
 import Navbar from "./components/navbar/Navbar";
-import { useDarkMode } from "./components/hooks/UseDarkMode";
-import LoadingWrapper from "./components/hooks/LoadingWrapper";
+import { useDarkMode } from "./hooks/UseDarkMode";
+import LoadingWrapper from "./hooks/LoadingWrapper";
 import LoginPage from "./userpage/login";
-import { isLoggedIn } from "./components/hooks/useAuth";
+import { isLoggedIn } from "./hooks/useAuth";
 
 async function getData() {
   return new Promise((resolve) => {

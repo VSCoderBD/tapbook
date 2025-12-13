@@ -13,9 +13,9 @@ export default function LogOut() {
   };
 
   return (
-    <button onClick={handleLogout} className="flex cursor-pointer justify-between w-full">
-      <div className="flex group items-center gap-2">
-        <div className="bg-card p-1.5 rounded-full">
+    <button onClick={handleLogout} className="flex group cursor-pointer justify-between w-full">
+      <div className="flex items-center gap-2">
+        <div className="bg-card group-hover:bg-cardHover p-1.5 rounded-full">
           <Image
             src="/images/profilemenu/logout.svg"
             alt="Logout"
